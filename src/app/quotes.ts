@@ -1,4 +1,6 @@
 export class Quotes {
+    id!:number;
     quote!: string;
-    autor!: string;
+    author!: string;
+    Date!: Date;
 }
