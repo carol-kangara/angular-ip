@@ -29,6 +29,9 @@ export class QuotesComponent implements OnInit {
       
     }
   }
+  displayInfo(index:any){
+    this.quotes[index]
+  }
   constructor() { }
 
   ngOnInit(): void {
