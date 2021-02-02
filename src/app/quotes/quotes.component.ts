@@ -14,11 +14,20 @@ export class QuotesComponent implements OnInit {
     {id:4,quote:"If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",author:'oprah Winfrey',Date: new Date(2021,2,7)},
     {id:5,quote:"If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success",author:'James Cameroon',Date: new Date(2021,2,7)}
   ];
-  addedQuotes(quotes){
+  addedQuotes(quote:any){
     let arraysize = this.quotes.length;
-    quotes.id = arraysize+1;
-    quotes.completeDate = new Date(quotes.completeDate)
-    this.quotes.push(quotes)
+    quote.id = arraysize+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
+  quoteDelete(Read:any, index:any){
+    if (Read) {
+      let toDelete = confirm(`Are you sure you want to delete this Quote?`)
+      if(toDelete){
+        this.quotes.splice(index,1);
+      }
+      
+    }
   }
   constructor() { }
 
