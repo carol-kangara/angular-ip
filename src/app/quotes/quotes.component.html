@@ -4,16 +4,19 @@
   
     <div class="row">
       <div class="col-md-6">
-        <div *ngFor='let quote of quotes;let i = index'>
-          <div>
-            <h6 id={{i}} appStrikethrough>{{quotes.quote}} due on {{quotes.completeDate|date}}</h6>
-            <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+        <ul>
+          <div *ngFor='let quote of quotes;let i = index'>
+            <div>
+              <h6 id={{i}} appStrikethrough>{{quotes.quote}} due on {{quotes.completeDate|date}}</h6>
+              <li> {{quotes.quote}} </li>
+              <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+            </div>
+    
+            <div *ngIf='quotes.showQuote'>
+              <app-quotes-detail  [quotes]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quotes-detail>
+            </div>
           </div>
-  
-          <div *ngIf='quotes.showDescription'>
-            <app-quotes-detail  [quotes]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quotes-detail>
-          </div>
-        </div>
+        </ul>
       </div>
       <div class="col-md-6">
         <app-quote-form></app-quote-form>
