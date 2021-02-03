@@ -8,12 +8,12 @@
           <div *ngFor='let quote of quotes;let i = index'>
             <div>
               <h6 id={{i}} appStrikethrough>{{quotes.quote}} due on {{quotes.completeDate|date}}</h6>
-              <li appStrikethrough> {{quotes.quote}} </li>
+              <li appStrikethrough> {{quotes.quotes}} </li>
               <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
             </div>
     
             <div >
-              <app-quotes-detail *ngIf='quotes.showQuote' [quotes]='quote' (isComplete) = 'completeGoal($event,i)'></app-quotes-detail>
+              <app-quotes-detail *ngIf='quotes.showQuote' [quotes]='quotes' (isComplete) = 'completeGoal($event,i)'></app-quotes-detail>
             </div>
           </div>
         </ul>

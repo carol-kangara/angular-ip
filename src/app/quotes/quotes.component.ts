@@ -3,7 +3,7 @@ import {Quotes} from '../quotes'
 
 @Component({
   selector: 'app-quotes',
-  templateUrl: './quotes.component.html',
+  templateUrl: './quote.component.html',
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {

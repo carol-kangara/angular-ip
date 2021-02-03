@@ -26,5 +26,10 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
-export class AppModule { }
+export class AppModule {}
+export class QuoteDetailComponentModule {
+}
+
+  

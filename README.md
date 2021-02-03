@@ -1,6 +1,25 @@
+# Angular-ip
+####  
+#### By CAROLINE KANG'ARA
+
 # QuotesApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+
+# Description
+
+This is a website wher people can upload their quotes and the quotes get voted up or down
+
+## Known Bugs
+The programlink isnot functional.
+
+## Technologies Used
+* TypeScript
+* Angular
+* JavaScript
+* css
+* Html
+* Bootstrap
 
 ## Development server
 
@@ -25,4 +44,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Support and contact details
+you can reach me using the following:
+* phone:0101234568
+* email:me@mail.com
+
 # angular-ip
