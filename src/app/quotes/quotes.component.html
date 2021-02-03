@@ -6,12 +6,12 @@
       <div class="col-md-6">
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
-            <h6 id={{i}} appStrikethrough>{{quotes.quote}} due on {{quotes.completeDate|date|uppercase}}</h6>
+            <h6 id={{i}} appStrikethrough>{{quotes.quote}} due on {{quotes.completeDate|date}}</h6>
             <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
           </div>
   
           <div *ngIf='quotes.showDescription'>
-            <app-quotes  [quotes]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quotes>
+            <app-quotes  [quotes]='quote' (isComplete) = 'strikethrough($event,i)'></app-quotes>
           </div>
         </div>
       </div>
@@ -20,3 +20,4 @@
       </div>
     </div>
   </div>
+  <app-quotes></app-quotes>
