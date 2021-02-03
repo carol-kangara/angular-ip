@@ -8,12 +8,11 @@ import {Quotes} from '../quotes'
 })
 export class QuotesComponent implements OnInit {
   quotes:Quotes[] = [
-
-    {id:1,quote:"Life is what happens when you're busy making other plans.",author:'John Lennon',completeDate: new Date(2021,2,7)},
-    {id:2, quote:"Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.",author:'Steve jobs',completeDate: new Date(2021,2,7)},
-    {id:3,quote:"If life were predictable it would cease to be life, and be without flavor.",author:'Eleanor Roosevelt',completeDate: new Date(2021,2,7)},
-    {id:4,quote:"If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",author:'oprah Winfrey',completeDate: new Date(2021,2,7)},
-    {id:5,quote:"If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success",author:'James Cameroon',completeDate: new Date(2021,2,7)}
+    new Quotes(1, "Life is what happens when you're busy making other plans.",'John Lennon',new Date(2021,2,7)),
+    new Quotes(2, "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.",'John Lennon',new Date(2021,2,7)),
+    new Quotes(3,"If life were predictable it would cease to be life, and be without flavor.",'Eleanor Roosevelt',new Date(2021,2,7)),
+    new Quotes(4,"If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",'oprah Winfrey',new Date(2021,2,7)),
+    new Quotes(5,"If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success",'James Cameroonnew',new Date(2021,2,7)),
   ];
   addedQuotes(quote:any){
     let arraysize = this.quotes.length;
