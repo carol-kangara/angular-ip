@@ -29,7 +29,7 @@ export class QuotesComponent implements OnInit {
       
     }
   }
-  toggleDetails(index){
+  toggleDetails(index:any){
     this.quotes[index].showQuote = !this.quotes[index].showQuote;
   }
   displayInfo(index:any){
