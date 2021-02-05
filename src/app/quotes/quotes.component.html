@@ -1,25 +1,21 @@
 <!-- <p>quote works!</p> -->
-<div class="container">
-    <h1>Quotes Generator</h1>
-    <hr>
-  
-    <div class="row">
-      <div class="col-md-5">
-        <ul>
-          <div *ngFor='let quote of quotes;let i = index'>
-            <div>
-              <h4 id={{i}}>{{quote.completeDate|date}}</h4>
-              <app-quote-detail *ngIf='quote' [quote]='quote' (isComplete) = 'completequotes($event,i)'></app-quote-detail>
-              <cite> {{quote.author}} </cite> 
-              <!-- <li > {{quote.quote}} </li> -->
-              
-              <!-- <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button> -->
-            </div>
+<div class="container"> 
+  <div class="row">
+    <div class="col-md-5 mr-1">
+      <h1>Quotes Generator</h1>
+      <hr>
+      <ul>
+        <div *ngFor='let quote of quotes;let i = index'>
+          <div>
+            <h4 id={{i}}>{{quote.completeDate|date}}</h4>
+            <app-quote-detail *ngIf='quote' [quote]='quote' (isComplete) = 'completequotes($event,i)'></app-quote-detail>
+            <cite> {{quote.author}} </cite> 
           </div>
-        </ul>
-      </div>
-      <div class="col-md-5">
-        <app-quotes-form></app-quotes-form>
+        </div>
+      </ul>
+    </div>
+    <div class="col-md-4 ml-2">
+      <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>></app-quotes-form>
       </div>
     </div>
   </div>
