@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This is a website wher people can upload their quotes and the quotes get voted up or down
 
 ## Known Bugs
-The programlink isnot functional.
+The program link is not functional.
 
 ## Technologies Used
 * TypeScript

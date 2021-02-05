@@ -28,8 +28,7 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
   bootstrap: [AppComponent]
   
 })
-export class AppModule {}
-export class QuoteDetailComponentModule {
+export class AppModule {
 }
 
   
